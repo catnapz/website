@@ -1,10 +1,11 @@
 import Image from 'next/image'
-import { Disclosure, Transition } from '@headlessui/react'
+import { Disclosure } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { classNames } from '../utils';
 import loader from "../image-loader";
+import logo from "../public/logo.png";
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -46,10 +47,11 @@ export const Header = () => {
                   <Image
                     loader={loader}
                     className="rounded-lg block h-8 w-auto"
-                    src="/logo.png"
+                    src={logo}
                     alt="catnaps logo"
                     height={36}
                     width={36}
+                    placeholder="blur"                  
                   />
                 </div>
                 <h1 className='absolute right-1 sm:right-0 text-lg sm:text-2xl text-primary dark:text-primary-dark'>catnapz</h1>
