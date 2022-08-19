@@ -1,11 +1,17 @@
 import { ReactNode } from 'react'
-import Header from './header'
+import { Header } from './header'
+import { Footer } from './footer'
 
-export default function Layout({ children }: {children: ReactNode}) {
+type LayoutProps = {
+    children: ReactNode
+}
+
+export const Layout = ({ children }: LayoutProps) => {
   return (
     <div className='flex flex-col md:container md:mx-auto min-h-screen bg-transparent'>
       <Header />
-      <main className='grow md:rounded-b-md pb-12 bg-neutral-50 dark:bg-neutral-800'>{children}</main>
+      <main className='grow md:rounded-b-md pb-12 bg-background dark:bg-background-dark'>{children}</main>
+      <Footer />
     </div>
   )
 }
