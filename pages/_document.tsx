@@ -9,12 +9,8 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Inter&display=optional"
             rel="stylesheet"
           />
+          <link rel="shortcut icon" href="./favicon.ico" />
         </Head>
-        <head>
-          <title>
-            catnapz
-          </title>
-        </head>
         <body className='bg-transparent'>
           <Main />
           <NextScript />

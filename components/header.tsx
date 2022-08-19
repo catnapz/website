@@ -4,6 +4,7 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { classNames } from '../utils';
+import loader from "../image-loader";
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -43,14 +44,15 @@ export const Header = () => {
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex-shrink-0 flex items-center">
                   <Image
+                    loader={loader}
                     className="rounded-lg block h-8 w-auto"
-                    src="/logo-512x512.png"
+                    src="/logo.png"
                     alt="catnaps logo"
                     height={36}
                     width={36}
                   />
                 </div>
-                <h1 className='absolute right-0 text-lg sm:text-2xl text-primary dark:text-primary-dark'>catnapz</h1>
+                <h1 className='absolute right-1 sm:right-0 text-lg sm:text-2xl text-primary dark:text-primary-dark'>catnapz</h1>
                 <div className="hidden sm:block sm:ml-6">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (

@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prod": "rm -r ./out && next build && next export"
+    "prod": "rm -rf ./out && next build && next export"
   },
   "dependencies": {
     "@headlessui/react": "^1.6.6",
