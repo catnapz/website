@@ -21,7 +21,7 @@ export const Header = () => {
   const router = useRouter();
 
   return (
-    <Disclosure as="nav" className="bg-surface dark:bg-surface-dark md:rounded-t-lg border-b border-surface-variant dark:border-surface-variant-dark ">
+    <Disclosure as="nav" className="bg-surface dark:bg-surface-dark border-b border-surface-variant dark:border-surface-variant-dark ">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
