@@ -19,13 +19,13 @@ export const Footer = () => {
           </a>
           <a
             title="email"
-            href="mailto:support@catnapz.dev"
+            href="mailto:support@catnapz.app"
             target="_blank"
             className="space-x-2"
             rel="noreferrer"
           >
             <i className="fa-solid fa-envelope" />
-            <span>support@catnapz.dev</span>
+            <span>support@catnapz.app</span>
           </a>
         </address>
         <Image
