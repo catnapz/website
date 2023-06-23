@@ -1,17 +1,18 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
+import type { NextPage } from "next";
+import Head from "next/head";
 
 const TeamPage: NextPage = () => {
   return (
-    <div className='px-4 sm:px-6'>
+    <>
       <Head>
         <title>catnapz | team</title>
       </Head>
-      <h1 className="text-left text-3xl font-bold">
-        Team
-      </h1>
-    </div>
-  )
-}
+      <div className="align-middle flex flex-grow flex-col items-center justify-center">
+        <h2>We are purrfecting this page right meow.</h2>
+        <h2>Come back later :)</h2>
+      </div>
+    </>
+  );
+};
 
-export default TeamPage
+export default TeamPage;
