@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 
 const ProjectsPage = () => {
   return (
-    <div className="align-middle flex flex-grow flex-col items-center justify-center">
+    <div className="text-center grow flex flex-col justify-center">
       <h2>We are working hard to make this page purrdy</h2>
       <h2>Cya l8r :)</h2>
     </div>

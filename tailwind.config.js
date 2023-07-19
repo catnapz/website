@@ -4,12 +4,13 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     colors: {
       transparent: "transparent",
+      brand: "#23ACEC",
       "surface-tint": {
         "DEFAULT": "#00658E",
         "dark": "#84CFFF"

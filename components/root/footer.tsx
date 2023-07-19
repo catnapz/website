@@ -1,30 +1,38 @@
 import Image from "next/image";
 
+const contactDetails = [
+  {
+    title: "GitHub",
+    href: "https://www.github.com/catnapz",
+    label: "github.com/catnapz",
+    icon: "fa-brands fa-github",
+  },
+  {
+    title: "Email",
+    href: "mailto:support@catnapz.app",
+    label: "support@catnapz.app",
+    icon: "fa-solid fa-envelope",
+  },
+];
+
 export const Footer = () => {
   return (
-    <footer className="bg-[#23ACEC]">
+    <footer className="bg-brand">
       <div className="container mx-auto flex justify-between">
         <address className="flex w-fit flex-col space-y-2 self-center">
-          <a
-            title="GitHub"
-            href="https://www.github.com/catnapz"
-            target="_blank"
-            className="space-x-2"
-            rel="noreferrer"
-          >
-            <i className="fa-brands fa-github" />
-            <span>github.com/catnapz</span>
-          </a>
-          <a
-            title="email"
-            href="mailto:support@catnapz.app"
-            target="_blank"
-            className="space-x-2"
-            rel="noreferrer"
-          >
-            <i className="fa-solid fa-envelope" />
-            <span>support@catnapz.app</span>
-          </a>
+          {contactDetails.map((detail, idx) => (
+            <a
+              key={idx}
+              title={detail.title}
+              href={detail.href}
+              target="_blank"
+              className="space-x-2 underline hover:font-medium text-on-primary"
+              rel="noreferrer"
+            >
+              <i className={detail.icon} />
+              <span>{detail.label}</span>
+            </a>
+          ))}
         </address>
         <Image
           src="/logo.png"

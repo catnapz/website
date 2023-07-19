@@ -18,27 +18,30 @@ const inactive =
 export const Header = () => {
   const path = usePathname();
   return (
-    <nav className="bg-surface dark:bg-surface-dark border-b border-surface-variant dark:border-surface-variant-dark ">
-      <Image
-        src="/logo.png"
-        alt="Organization Logo"
-        height={50}
-        width={50}
-        priority
-      />
-      <h1 className="text-primary dark:text-primary-dark">catnapz</h1>
-      <div className="flex space-x-4">
+    <nav className="bg-surface dark:bg-surface-dark border-b border-surface-variant dark:border-surface-variant-dark">
+      <div className="container py-2 px-6 md:px-4 flex items-center mx-auto space-x-4">
         {navigation.map((item) => (
           <Link
             href={item.href}
             className={`${path === item.href ? active : inactive}
-                  px-3 py-2 rounded-md text-sm font-medium`}
+                  px-3 py-2 rounded-md text-sm font-medium last-of-type:flex-1`}
             aria-current={path === item.href ? "page" : undefined}
             key={item.name}
           >
             {item.name}
           </Link>
         ))}
+        <div className="flex items-center space-x-2">
+          <Image
+            className="rounded-full"
+            src="/logo.png"
+            alt="Organization Logo"
+            height={30}
+            width={30}
+            priority
+          />
+          <h1 className="text-primary dark:text-primary-dark">catnapz</h1>
+        </div>
       </div>
     </nav>
   );
