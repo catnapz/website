@@ -1,6 +1,4 @@
 import Image from "next/image";
-import loader from "../image-loader";
-import logo from "../public/logo.png";
 
 export const Footer = () => {
   return (
@@ -29,12 +27,10 @@ export const Footer = () => {
           </a>
         </address>
         <Image
-          loader={loader}
-          src={logo}
-          alt="catnapz Logo"
+          src="/logo.png"
+          alt="Organization Logo"
           height={100}
           width={100}
-          placeholder="blur"
         />
       </div>
     </footer>
